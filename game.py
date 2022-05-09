@@ -4,6 +4,8 @@ print("Try to guess my number.")
 import random
 answer = random.randint(1,100)
 guess = int(input("Your guess? "))
+while guess > 100 or guess < 1:
+    guess = int(input("Your guess has to be between 1 and 100.\nYour guess: "))
 count = 1
 while guess != answer:
     if guess > answer:
